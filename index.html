@@ -44,6 +44,14 @@ function drawRectangle()
       var b_context = b_canvas.getContext("2d");
       b_context.fillRect(50, 25, 150, 100);
 }
+
+function drawName() 
+{
+      var b_canvas = document.getElementById("b");
+      var b_context = canvas.getContext("2d");
+      context.font = "20px Arial";
+      context.fillText("Kritika", 50, 150);
+    }
 </script>
 
 
@@ -78,6 +86,8 @@ function drawRectangle()
 	<p>Content goes here.</p>
 	<canvas id="b" width="300" height="225" style="border: 2px solid black;"></canvas>
 	<button onclick="drawRectangle()">Draw Rectangle</button>
+	<button onclick="drawName()">Add My Name</button>
+
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
