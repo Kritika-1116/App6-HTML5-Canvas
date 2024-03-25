@@ -38,37 +38,37 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-function drawRectangle() 
+function drawRectangle() //this function draws a rectangle in the canvas made
 {
-      var b_canvas = document.getElementById("b");
-      var b_context = b_canvas.getContext("2d");
-      b_context.fillRect(50, 25, 150, 100);
+      var b_canvas = document.getElementById("b"); // goes and gets the id "b" which is the code for the canvas. this allows for the function's code to be added within the canvas
+      var b_context = b_canvas.getContext("2d"); // "2d" refers to to the type of drawing that is being made. in this case it is a 2D drawing
+      b_context.fillRect(50, 25, 150, 100); // this codes for the dimensions of the rectangle that is filling the canvas
 }
 
 function drawName() 
 {
-      var b_canvas = document.getElementById("b");
-      var b_context = b_canvas.getContext("2d");
-      b_context.font = "bold 12px sans-serif";
-      b_context.fillText("Kritika", 50, 150);
+      var b_canvas = document.getElementById("b"); // goes and gets the id "b" which is the code for the canvas. this allows for the function's code to be added within the canvas
+      var b_context = b_canvas.getContext("2d"); // "2d" refers to to the type of drawing that is being made. in this case it is a 2D drawing
+      b_context.font = "bold 12px sans-serif"; // this code speciies the font style and size
+      b_context.fillText("Kritika", 50, 150); // specifies the actual text being displayed in the canvas and its dimensions
     }
 
 function loadImage()
 {
-      var b_canvas = document.getElementById("b");
-      var b_context = b_canvas.getContext("2d");
-      var img = new Image();
-      img.onload = function() 
+      var b_canvas = document.getElementById("b"); // goes and gets the id "b" which is the code for the canvas. this allows for the function's code to be added within the canvas
+      var b_context = b_canvas.getContext("2d"); // "2d" refers to to the type of drawing that is being made. in this case it is a 2D drawing
+      var img = new Image(); // from the previous coding assignment, we were able to learn the code to add an image, creating a new variable for new Image()
+      img.onload = function() // function for adding the image to the screen
       {
         b_context.drawImage(img, 0, 0, b_canvas.width, b_canvas.height);
       };
-      img.src = 'https://i.pinimg.com/originals/b1/15/d0/b115d0eb4fdd631e1ce722baa23164c1.jpg';
+      img.src = 'https://i.pinimg.com/originals/b1/15/d0/b115d0eb4fdd631e1ce722baa23164c1.jpg'; // the direct link of the picture is added here in which it can be added to the canvas
 }
 
-function clearCanvas()
+function clearCanvas() // this function clears the canvas to blank
 {
-	var b_canvas = document.getElementById("b");
-	b_canvas.width = b_canvas.width;
+	var b_canvas = document.getElementById("b"); // goes and gets the id "b" which is the code for the canvas. this allows for the function's code to be added within the canvas
+	b_canvas.width = b_canvas.width; // when setting the canvas width equal to itself, nothing can be added to the screen and it is cleared
 }
 </script>
 
@@ -103,10 +103,10 @@ function clearCanvas()
 <div id="content" class="w3-container">
 
 	<canvas id="b" width="300" height="225" style="border: 2px solid black;"></canvas>
-	<button onclick="drawRectangle()">Draw Rectangle</button>
-	<button onclick="drawName()">Add My Name</button>
-	<button onclick="loadImage()">Load Image</button>
-        <button onclick="clearCanvas()">Clear</button>
+	<button onclick="drawRectangle()">Draw Rectangle</button> <!-- creates button for drawing rectangle on canvas, runs drawRectangle() function on click -->
+	<button onclick="drawName()">Add My Name</button> <!-- creates button for drawing my name on the canvas, runs drawName() function on click -->
+	<button onclick="loadImage()">Load Image</button> <!-- creates button for loading the star image on the canvas, runs loadImage() function on click -->
+        <button onclick="clearCanvas()">Clear</button> <!-- creates button for clearing the canvas, runs clearCanvas() function on click -->
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
